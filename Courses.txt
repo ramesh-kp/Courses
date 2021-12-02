@@ -1,0 +1,28 @@
+C Programming
+Advanced C Programming Course
+Mastering Data Structures & Algorithms using C and C++
+
+Embedded
+Electronics engineering: An introduction
+The Complete Electronics Course 2021: Analog Hardware Design
+Master Microcontroller :Timers, PWM, CAN,RTC,Low Power(MCU2)
+Master Microcontroller and Embedded Driver Development(MCU1)
+Embedded Systems Programming on ARM Cortex-M3/M4 Processor
+
+Python
+Python for Beginners: Introduction to Python - 16.5
+Learn to Code with Python - 58
+Python,Flask Framework And Django Course For Beginners - 18.5
+Python Django Dev To Deployment - 11
+
+Python for Computer Vision with OpenCV and Deep Learning
+Data Science and Machine Learning using Python - A Bootcamp
+NLP - Natural Language Processing with Python
+Genetic Algorithms in Python and MATLAB
+
+https://www.udemy.com/  
+user: learn@naicoits.com
+pwd: L#arn@Naico
+
+
+
