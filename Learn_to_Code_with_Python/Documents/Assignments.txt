@@ -1,0 +1,412 @@
+2.	1.	What purpose do comments serve in code?
+		##############################
+		Comments can
+			disable one or more lines of code
+			provide context on what a complex piece of code is doing
+			provide documentation for future developers and more!
+	2.	What is the name we give to an expected input to a function?
+		##############################
+		A parameter is the name for an expected input to a function.
+	3.	What is the name we give to the actual value passed to the function invocation?
+		##############################
+		An argument represents the actual value passed in for a given parameter.
+	4.	What is the technical name for the output of a function?
+		##############################
+		A return value represents the output of a function or, in other words, what it gives
+		Back to the outside world once it is done executing.
+	5.	What is a keyword parameter / argument?
+		##############################
+		A keyword argument is one that is connected to a corresponding parameter when 
+		a function is invoked. The parameter name is written out explicitly followed by an 
+		equal sign and the argument.
+	6.	What are two of the keyword parameters that can be passed to the print function 
+		when it's invoked?
+		##############################
+		Any combination of two from sep, end, file, flush is acceptable.
+3.	1.	How do I convert the string “1000” to an integer?
+		##############################
+		int("1000")
+	2.	How do I convert the floating point number 3.764 to an integer? What will be the return value?
+		##############################
+		int(3.764)
+		The return value will be 3.
+	3.	In a Python program, I have my business expenses represented by a floating point number: 9.45. 
+		I want to express this value as a string. However, I also want to add
+		- a dollar sign ($) in front of the amount
+		- a space and the word “dollars” at the end
+		The final result should be "$99.45 dollars".
+		NOTE: Your answer must use concatenation.
+		NOTE: 99.45 must start out as a floating-point value. You cannot use "99.45". Instead, figure out 
+		a way to convert 99.45 to a string.
+		##############################
+		"$" + str(99.45) + " dollars"
+4.	1.	What is the name of the blueprint / template that is used to create objects in Python?
+		##############################
+		A class
+	2.	Each object constructed from a class is called an ________ of the class.
+		##############################
+		Instance
+	3.	What does the type function do?
+		##############################
+		It returns the class (i.e. the blueprint) that an object is constructed from.
+	4.	What is a Boolean? What are its two possible values?
+		##############################
+		A Boolean is a special data type / object available in Python that can only be one of two values: 
+		True or False.
+	5.	What is the technical name for the % operator? What does it do?
+		##############################
+		It is the modulo or remainder operator. It returns the remainder of a division operation.
+	6.	How can you convert one data type to another? Provide some examples.
+		##############################
+		Utility functions like str, int, and float are available to convert one data type to another.
+		str(95.43)
+		float("200.36")
+		int("19")
+5.	Convert Fahrenheit Temperature to Celsius (Explanation)
+	Ask the user for a temperature in degrees Fahrenheit with the ​input​ function.
+	Convert the user's input string to a floating point data type with the ​float​ function.
+	Perform some mathematical calculations to convert the temperature to Celsius.
+	Output the result to the user with the ​print​ function.
+	##############################
+	user_value = input("Enter a temperature in Fahrenheit to convert to Celsius ")
+	fahr_temp = float(user_value)
+	cels_temp = (fahr_temp - 32) * (5/9)
+	print(fahr_temp, "in Celsius is", cels_temp)
+6.	1.	What is a variable?
+		##############################
+		A variable is a name or placeholder for an object.
+	2.	Is the variable name ​X​ equivalent to the variable ​x​? Why?
+		##############################
+		No, the two are not equivalent. Variable names are case-sensitive.
+	3.	What is the value of a at the end of this sequence of code?
+		a = 10
+		a += 3
+		a -= 5
+		a *= 4
+		##############################
+		The final value of a will be 32.
+		We begin with an initial variable value of 10 and then add 3 to get 13.
+		We then subtract 5 from 13 to get 8.
+		We then multiply 8 by 4 to arrive at 32.
+		Each subsequent value is assigned to the a variable along the way.
+	4.	What error will be raised with the following code?
+		print(days_remaining / 10)
+		##############################
+		NameError
+		The days_remaining variable does not exist in the code.
+	5.	What error will be raised with the following code?
+		float("Rocket")
+		##############################
+		ValueError
+		A string of only text characters is an inappropriate value that the float function cannot 
+		convert to a decimal number.
+	6.	What does ​type(5)​ return?
+		##############################
+		<class 'int'>
+		This represents the class or blueprint that creates every integer object in Python.
+	7.	What is wrong with the variable name ​continue​?
+		##############################
+		It’s a reserved Python keyword.
+7.	1.	What is a function?
+		##############################
+		A function is a collection of 1 or more Python statements. It is an organized chunk of code 
+		that can be reused throughout a program.
+	2.	Tell me a little about parameters, arguments, and return values.
+		##############################
+		A parameter is a name for an expected input to a function. 
+		The argument is the actual value passed in for a parameter. 
+		A return value is the output of a function.
+	3.	What is a default argument? How do you define one?
+		##############################
+		A default argument is a fallback value that will be passed to a parameter if an argument is 
+		not passed during function invocation.
+	4.	What data type represents nothingness or nonexistence or emptiness?
+		##############################
+		None
+	5.	What is the difference between positional arguments and keyword arguments?
+		##############################
+		A positional argument is passed to a function by sequence (the order of expected arguments). 
+		A keyword argument is passed to a function by a keyword identifier.
+8.	1.	How can you check if the string "and" is found in the string "commando"?
+		##############################
+		"and" in "commando"
+	2.	What number does the index start counting from?
+		##############################
+		0
+	3.	What will the code below evaluate to?
+		"commando"[3:7]
+		##############################
+		"mand"
+	4.	What will the code below evaluate to?
+		"monroeville"[6:]
+		##############################
+		"ville"
+	5.	What will the code below evaluate to?
+		"destiny"[:4]
+		##############################
+		"dest"
+	6.	What is the difference between ​\n​ and ​\t​?
+		##############################
+		The former creates a line break (new line) in the string. The latter creates a tab in the string.
+	7.	What function calculates the number of characters in a string?
+		##############################
+		len()
+	8.	What is the technical word that means “to combine strings together”?
+		##############################
+		concatenate
+	9.	What will the code below evaluate to?
+		"november"[6]
+		##############################
+		"e"
+	10.	What will the code below evaluate to?
+		"misfortune"[10]
+		##############################
+		IndexError
+9.	1.	How does the rfind method work?
+		##############################
+		While the find method returns the first index where a substring occurs, the rfind method returns 
+		the last index where a substring occurs. Another way to think about the method is as "right find" 
+		-- it is starting the search from the right side of a string instead of the left.
+	2.	Provide 3 examples of the rfind method in action. Write the invocation along with the return value.
+		##############################
+		print("coca cola".rfind("c"))   # 5 - the 'c' in cola
+		print("catchphrase".rfind("a")) # 8 - the 'a' in phrase
+		print("jumanji".rfind("j"))     # 5 - the second 'j'
+10.	1.	What is a method?
+		##############################
+		An easy way to describe a method is a function belonging to an object. It's a procedure or an 
+		action we ask the object to do.
+	2.	What is the difference between the find and index methods?
+		##############################
+		The index method raises a ValueError exception if the substring argument does not exist in the 
+		original string. In comparison, the find method returns a -1 instead.
+	3.	What single string method replaces uppercase characters with lowercase characters and lowercase 
+		characters with uppercase characters?
+		##############################
+		swapcase
+		print("CaNdY BaR".swapcase()) # "cAnDy bAr"
+	4.	What are the 3 ways that you can provide arguments to the format method?
+		##############################
+		Relative position, numeric position, and keyword arguments.
+	5.	What method removes whitespace from the beginning and end of a string?
+		##############################
+		strip
+		print("    hello    ".strip()) # "hello"
+	6.	What method capitalizes the first letter of each word in a string?
+		##############################
+		title
+		print("Once upon a time".title()) # "Once Upon A Time"
+	7.	What method substitutes all occurrences of a letter in a string with another letter?
+		##############################
+		replace
+		print("rarara".replace("r", "zp")) # "zpazpazpa"
+	8.	Pick a string method that returns a Boolean and describe how it works. Provide a code example.
+		##############################
+		The isspace method returns True if a string consists only of spaces.
+		print("      ".isspace()) # True
+11.	FizzBuzz is a popular programming problem to test a developer's ability to think logically with code.
+	The problem is simple but deceptive. Define a fizzbuzz function that accepts a single number as an 
+	argument. There are a couple caveats. 
+	- The function should print every number from 1 to that argument.
+	- If the number is divisible by 3, print "Fizz" instead of the number.
+	- If the number is divisible by 5, print "Buzz" instead of the number.
+	- If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
+	- If the number is not divisible by either 3 or 5, just print the number.
+	Example: fizzbuzz(30)should print:
+	1
+	2
+	Fizz
+	4
+	Buzz
+	Fizz
+	7
+	8
+	Fizz
+	Buzz
+	11
+	Fizz
+	13
+	14
+	FizzBuzz
+	16
+	17
+	Fizz
+	19
+	Buzz
+	Fizz
+	22
+	23
+	Fizz
+	Buzz
+	26
+	Fizz
+	28
+	29
+	FizzBuzz
+	##############################
+	def fizzbuzz(final_number):
+		current_number = 1
+		while current_number <= final_number:
+			if current_number % 15 == 0:
+				print("FizzBuzz")
+			elif current_number % 3 == 0:
+				print("Fizz")
+			elif current_number % 5 == 0:
+				print("Buzz")
+			else:
+				print(current_number)
+			current_number += 1
+			
+	fizzbuzz(30)
+12.	1.	What is recursion?
+		##############################
+		Recursion is when a function invokes itself within its own body. Python keeps track of each 
+		execution context separately.
+	2.	Provide two examples of truthy values and two examples of falsy values. Do not use True or False.
+		##############################
+		An empty string and 0 are two falsy values. A string with any characters and a positive number 
+		are two truthy values.
+	3.	True or False: elif cannot be used in combination with else. It’s either one or the other.
+		##############################
+		False. You can combine an if statement with multiple elifs followed by a single else.
+	4.	What is an infinite loop? How can you accidentally create one?
+		##############################
+		An infinite loop is one that does not have a condition that allows it to terminate. It runs until 
+		the program runs out of memory. One way to create an infinite loop is with a while condition that 
+		always evaluates to True.
+	5.	Pick either the and keyword or the or keyword and describe what it does.
+		##############################
+		The and keyword ensures that two or more conditions both evaluate to True in order to ensure that 
+		something executes (for example, a block tied to an if statement).
+13.	1.	What is a list?
+		##############################
+		A list is a mutable data structure for storing a sequence of objects.
+	2.	What is the index?
+		##############################
+		The index is a numeric count. Each element in a list is assigned an index position that reflects 
+		its place in line. The index starts counting at 0.
+	3.	What does a single negative number in square brackets extract from a list?
+		##############################
+		A negative number extracts the element that is that amount of elements from the end of the list. 
+		For example, [-3]  extracts the element that is third-to-last or third from the end.
+	4.	What happens if Python attempts to access an index position that does not exist?
+		##############################
+		An ​IndexError​ exception will be raised if the index position does not exist.
+	5.	What function is used to determine the number of elements in a list?
+		##############################
+		The len function.
+14.	1.	What makes a list an iterable object? What is another example of an iterable object?
+		##############################
+		An object is iterable if its elements can be accessed one at a time. A string is another iterable 
+		object — its characters can be accessed one at a time.
+	2.	What is an alternative syntax to using the reversed function to iterate backwards over a list?
+		##############################
+		The special slice syntax ​[::-1]​ returns a copy of the list with the elements in reverse order.
+	3.	What function allows us to access the index of each element in the for loop?
+		##############################
+		The enumerate function grants access to the index of each element in a for loop. It will be 
+		represented by the first of the two variables we place after the for keyword.
+	4.	What is the difference between the break and continue keywords?
+		##############################
+		The continue keyword moves the loop to the start of the next iteration. The break keyword 
+		terminates the loop completely.
+	5.	What do the three arguments to the range function present?
+		##############################
+		The inclusive starting value, the exclusive ending value and the stride interval.
+15.	1.	What’s the difference between the append and extend methods?
+		##############################
+		The append method adds a single element to the end of the list. The extend method can add 
+		multiple elements to a list from an iterable (such as another list).
+	2.	What’s the difference between the pop and remove methods?
+		##############################
+		The pop method removes an element from a list by its index position (or the end of a list if an 
+		index is not provided). The remove method removes a single element from a list by its value.
+	3.	Given a list
+		numbers = [1, 4, 5, 7, 9]
+		how can you overwrite the values 4 and 5 with 6 and 8?
+		##############################
+		numbers[1:3] = [6, 8]
+	4.	What do the two arguments to the insert method represent?
+		##############################
+		The index position to insert an element in and the value itself. The list will be mutated.
+	5.	What does it mean for an object to be mutable?
+		##############################
+		A mutable object such as a list is capable of change. It can be updated or modified in place 
+		without creating a copy.
+16.	1.	Describe how the maxsplit parameter for the split method works.
+		##############################
+		The maxsplit parameter puts an upper threshold on how many times a string can be split by a 
+		separator / delimiter. Once the limit is reached, the remaining substring is used as the last 
+		element in the returned list.
+	2.	What is list comprehension?
+		##############################
+		List comprehension is a shorthand syntax for generating a new list from an existing iterable. 
+		It allows us to apply the same operation to each element from a starting list, each character 
+		in a string, etc.
+	3.	What is the difference between the split and the join methods?
+		##############################
+		Both methods are invoked on a string object. The split method splits or cuts a string based on 
+		the occurrences of a separator or delimiter. It returns a list of all the sliced elements. The 
+		join method does the opposite; it converts a list of strings into a single concatenated string. 
+		The string that the join method is invoked on serves as the separator between every two 
+		subsequent strings.
+	4.	What error is raised if the argument passed to the index method doesn’t exist in the list?
+		##############################
+		A ValueError is raised.
+	5.	What’s been your favorite method or list feature so far?
+		##############################
+		I’m the instructor; I like them all! If I had to choose, list comprehensions are always fun to 
+		write.
+17.	1.	What is a lambda function?
+		##############################
+		A lambda​ function is an anonymous function or a function without a name. It is a function that is 
+		declared in-line and meant to be used once and discarded.
+	2.	What is the difference between the all and any functions?
+		##############################
+		Both functions accept an iterable such as a list. The all function returns True if every element 
+		in the iterable is True or truthy. The any function returns True if any element in the iterable 
+		is True or truthy.
+	3.	What function can you use to find out all available attributes on an object?
+		##############################
+		dir
+	4.	What function can you use to read documentation on a given object, function or method?
+		##############################
+		help
+	5.	Given a list of floating point values
+		values = [3.45, 5.67, 7.89]
+		provide the code to get list of squares of the values using both 
+		(1) list comprehension and (2) the map function.
+		##############################
+		# map function
+		square_map = list(map(lambda x: x * x, values))
+		print(square_map)
+		# list comprehension
+		square_list_comprehension = [x * x for x in values]
+		print(square_list_comprehension)
+18.	1.	What is a tuple?
+		##############################
+		A tuple is a data structure used to store elements in order. It is a sibling to a list but cannot 
+		be mutated once it has been created.
+	2.	What does it mean to unpack a tuple?
+		##############################
+		Unpacking a tuple is the process of “spreading” or “destructuring” the elements within a tuple so 
+		they can be assigned to individual variables.
+	3.	Name three methods that a list has that a tuple do not. What do these methods all have in common?
+		##############################
+		Three methods are append, clear, and pop. All of these methods mutate a list. This is not 
+		possible with an immutable tuple, which is why it does not have them.
+	4.	What do lists and tuples have in common?
+		##############################
+		They are both used to store elements in sequence. Each value is assigned an index position that 
+		represents its place in line. The index starts counting at 0. They can be iterated over with a 
+		for loop.
+	5.	Declare a tuple with 5 elements. The values should be of a variety of different types.
+		Unpack the first two elements into a list assigned to a variable.
+		Unpack the remaining three elements into three separate variables.
+		##############################
+		ingredients = ("Chicken", "Beef", "Cumin", 375, 30)
+		*meats, spice, temperature, cooking_time = ingredients
+		print(meats)        # ['Chicken', 'Beef']
+		print(spice)        # Cumin
+		print(temperature)  # 375
+		print(cooking_time) # 30
