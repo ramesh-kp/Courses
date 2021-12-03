@@ -438,4 +438,70 @@
 		Garbage collection refers to Python cleaning up unused objects in the program. It occurs whenever 
 		an object no longer has a reference (variable) pointing to it (for example, after a variable 
 		reassignment).
-20.	
+20.	1.	Which method removes all key-values pair from a dictionary?
+		##############################
+		clear
+	2.	Which method merges a dictionary with another one?
+		##############################
+		update
+	3.	What will be the value for the "a" key in the d1 dictionary after the code below?
+		d1 = {
+			"a": 5,
+			"b": 10,
+			"c": 5
+			}
+		d2 = {
+			"a": 8,
+			"b": 12,
+			"d": 16
+			}
+		d1.update(d2)
+		##############################
+		8
+	4.	What error will be raised if the pop method is called with a key that does not exist in a dictionary?
+		##############################
+		KeyError
+	5.	What are the differences between the get and setdefault methods?
+		##############################
+		If a key is not found in a dictionary, the get method will return its second argument as the value.
+		In comparison, if a key is not found in a dictionary, the setdefault method writes the key-value pair to 
+		the dictionary. The first argument to the method will serve as the key and the second argument will serve as 
+		the value. The second argument has a default argument of None.
+	6.	Write the syntax to access the value of 20 from within this nested data structure.
+		nba_finals = {
+			"Game 1": {
+				"date": "05/05/2019",
+				"location": "San Francisco",
+				"statistics": {
+					"points": 200,
+					"rebounds": 20,
+					"assists": 25
+					}
+				}
+			}
+		##############################
+		nba_finals["Game 1"]["statistics"]["rebounds"]
+	7.	How many key-value pairs does the top-level dictionary hold?
+		my_dict = {
+			"a": {
+				1: 2,
+				3: 4,
+				5: {
+					6: 7,
+					8: 9
+					}
+				}
+		}
+		##############################
+		1
+	8.	What will the mystery dictionary look like after the code below? Write out the complete object.
+		mystery = {
+			"a": 2
+			}
+		mystery.setdefault("A", 5)
+		mystery.setdefault("a", 10)
+		mystery.setdefault("B", 30)
+		mystery.setdefault("B", 40)
+		##############################
+		{'a': 2, 'A': 5, 'B': 30}
+21.	
