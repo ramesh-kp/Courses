@@ -5,7 +5,8 @@ Created on Mon Nov 29 23:25:14 2021
 
 19.	1.	Define a smallest_number function  that accepts a list of numbers.
 		It should return the smallest value in the list.
-		EXAMPLE
+		EXAMPLES
+		--------
 		smallest_number([1, 2, 3])     => 1
 		smallest_number([3, 2, 1])     => 1
 		smallest_number([4, 5, 4])     => 4
@@ -13,7 +14,8 @@ Created on Mon Nov 29 23:25:14 2021
 	2.	Define a concatenate function that accepts a list of strings. 
 		The function should return a concatenated string which consists of all list elements whose 
 		length is greater than 2 characters.
-		EXAMPLE
+		EXAMPLES
+		--------
 		concatenate(["abc", "def", "ghi"])      => "abcdefghi"
 		concatenate(["abc", "de", "fgh", "ic"]) => "abcfgh"
 		concatenate(["ab", "cd", "ef", "gh"])   => ""
@@ -21,7 +23,8 @@ Created on Mon Nov 29 23:25:14 2021
 		The function should sum the index positions of the first occurence of the letter “s” in each word. 
 		Not every word is guaranteed to have an “s”.
 		Don’t use "sum" as a variable name as it’s a built-in keyword.
-		EXAMPLE
+		EXAMPLES
+		--------
 		super_sum([])                                 => 0
 		super_sum(["mustache"])                       => 2
 		super_sum(["mustache", "greatest"])           => 8

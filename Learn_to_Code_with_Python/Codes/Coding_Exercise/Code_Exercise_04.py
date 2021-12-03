@@ -7,6 +7,7 @@ Created on Tue Nov 23 17:14:04 2021
 		It should return a concatenated version of the arguments with a space in between.
 		If the user does not pass in arguments, both arguments should default to an empty string.
 		EXAMPLES
+		--------
 		string_adder("Hello", "World")      => "Hello World"
 		string_adder("Emilio", "Estevez")   => "Emilio Estevez"
 		string_adder()                      => " "
@@ -15,6 +16,7 @@ Created on Tue Nov 23 17:14:04 2021
 		Return the product of the arguments. The product is the total when values are multiplied together.
 		If the user does not provide any arguments, all three parameters should have default arguments of 1.
 		EXAMPLES
+		--------
 		multiplier(2, 2, 2)    => 8
 		multiplier()           => 1
 		multiplier(3)          => 3

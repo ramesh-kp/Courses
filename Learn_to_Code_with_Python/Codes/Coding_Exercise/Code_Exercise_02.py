@@ -3,8 +3,8 @@
 Created on Tue Nov 23 16:35:43 2021
 @author: ramesh.kp
 
-2.	a.	Declare a ​season​ variable and assign it a string of your favorite season
-		(Summer, Fall, Spring, or Winter). Make sure the first letter is capitalized.
+2.	a.	Declare a ​season​ variable and assign it a string of your favorite season (Summer, Fall, Spring, or Winter). 
+		Make sure the first letter is capitalized.
 	b.	Declare a ​lucky_number​ variable and assign it your favorite number.
 	c.	Declare a ​hard_math​ variable and assign it the sum of 3, 4 and 5.
 	d.	Declare a ​my_str​ variable set to a string of “3”.

@@ -7,15 +7,17 @@ Created on Thu Nov 25 12:14:16 2021
 		If the integer is even, the function should return the string “even”.
 		If the integer is odd, the function should return the string “odd”.
 		EXAMPLES
+		--------
 		even_or_odd(2)    => "even"
 		even_or_odd(0)    => "even"
 		even_or_odd(13)   => "odd"
 		even_or_odd(9)    => "odd"
 	2.	Define a truthy_or_falsy function that accepts a single argument.
-		The function should return a string that reads "The value _____ is ______" 
-		where the first space is the argument and the second space 
-		is either 'truthy' or 'falsy'. See the sample invocations below.
-		EXAMPLE
+		The function should return a string that reads "The value _____ is ______". 
+		where the first space is the argument and the second space is either 'truthy' or 'falsy'. 
+		See the sample invocations below.
+		EXAMPLES
+		--------
 		truthy_or_falsy(0)        => "The value 0 is falsy"
 		truthy_or_falsy(5)        => "The value 5 is truthy"
 		truthy_or_falsy("Hello")  => "The value Hello is truthy"

@@ -410,3 +410,32 @@
 		print(spice)        # Cumin
 		print(temperature)  # 375
 		print(cooking_time) # 30
+19.	1.	What is a variable?
+		##############################
+		A variable is a name, identifier, or label for an object in your program. 
+	2.	What is the difference between equality and identity?
+		##############################
+		Equality is the state of two objects being intrinsically equal, i.e. being of the same value. 
+		Identity means two references (variables) in the program refer to the same object in the 
+		computer’s memory. In a real-world example, equality is when two houses are built with the exact 
+		same structure. Identity is when one house is assigned two different addresses.
+	3.	What will the frontend variable be equal to and why?
+		web_dev = ["HTML", "CSS", "JavaScript"]
+		frontend = web_dev
+		web_dev.append("React")
+		print(frontend)
+		##############################
+		The frontend variable will be a list equal to ['HTML', 'CSS', 'JavaScript', 'React’]. The string 
+		“React” has been added to the end by the append method call. This happens because the web_dev and 
+		frontend variables point to the same list object in memory.
+	4.	What is the difference between a shallow copy and a deep copy?
+		##############################
+		A shallow copy only creates a copy of the outermost level or layer of an object. In comparison, 
+		a deep copy recursively creates copies of all internal nested objects, down any number of levels. 
+		It is a more "complete" copy.
+	5.	What is garbage collection and how does it work?
+		##############################
+		Garbage collection refers to Python cleaning up unused objects in the program. It occurs whenever 
+		an object no longer has a reference (variable) pointing to it (for example, after a variable 
+		reassignment).
+20.	

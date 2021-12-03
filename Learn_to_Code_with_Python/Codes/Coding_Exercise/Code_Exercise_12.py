@@ -7,15 +7,17 @@ Created on Thu Nov 25 12:23:22 2021
 		It should return True if the number is evenly divisible by both 3 and 4 . 
 		It should return False otherwise.
 		EXAMPLES
+		--------
 		divisible_by_three_and_four(3)   => False
 		divisible_by_three_and_four(4)   => False
 		divisible_by_three_and_four(12)  => True
 		divisible_by_three_and_four(18)  => False
 		divisible_by_three_and_four(24)  => True
 	2.	Declare a string_theory function that accepts a string as an argument.
-		It should return True if the string has more than 3 characters 
-		and starts with a capital “S”. It should return False otherwise.
-		EXAMPLE
+		It should return True if the string has more than 3 characters and starts with a capital “S”. 
+		It should return False otherwise.
+		EXAMPLES
+		--------
 		string_theory("Sansa") => True
 		string_theory("Story") => True
 		string_theory("See") => False

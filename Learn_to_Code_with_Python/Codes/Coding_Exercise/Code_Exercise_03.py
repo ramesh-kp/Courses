@@ -8,6 +8,7 @@ Created on Tue Nov 23 16:48:35 2021
 	c.	Define a convert_to_currency function that accepts a single parameter (an integer). 
 		The function should convert the argument to a string, prefix it with a dollar sign, and return the result.
 		EXAMPLES
+		--------
 		convert_to_currency(15)    => "$15"
 		convert_to_currency(8)     => "$8"
 """

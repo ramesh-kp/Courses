@@ -8,6 +8,7 @@ Created on Tue Nov 30 16:38:30 2021
 	The function should return a string where all characters have been moved "up" two spots in the alphabet. 
 	For example, "a" will become "c".
 	EXAMPLES
+    --------
 	encrypt_message("abc") => "cde"
 	encrypt_message("xyz") => "zab"
 	encrypt_message("")    => ""
