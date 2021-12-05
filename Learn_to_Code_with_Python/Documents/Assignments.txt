@@ -504,4 +504,31 @@
 		mystery.setdefault("B", 40)
 		##############################
 		{'a': 2, 'A': 5, 'B': 30}
-21.	
+21.	1.	How does the items method on a dictionary work? Provide an example.
+		##############################
+		The items method returns an iterable view object that yields ONE key-value pair at a time, stored in a tuple. 
+		The for loop can be used to iterate over each tuple. Two variables have to be declared: one for the key and 
+		one for the value.
+		my_dict = { "a": 1, "b": 2 }
+		for k, v in my_dict.items():
+			print(k, v)
+
+		# a 1
+		# b 2
+	2.	What does the sorted function return when passed a dictionary object?
+		##############################
+		It returns a list of the dictionary’s keys sorted in ascending or alphabetical order.
+	3.	What symbols are needed in front of a parameter to create a dictionary from keyword arguments?
+		##############################
+		**
+	4.	What is the difference between *args and **kwargs in a function definition?
+		##############################
+		*args creates a tuple of any number of sequentially passed arguments. **kwargs creates a dictionary 
+		representing the keyword arguments. Each keyword parameter is stored as a key and each keyword argument is 
+		stored as a value.
+	5.	Given the list below, write a dictionary comprehension to return a dictionary where the keys are the numbers 
+		and the values are their cubes. The dictionary should only use the numbers that are even.
+		numbers = [3, 6, 7, 12, 15]
+		##############################
+		{ number: number ** 3 for number in numbers if number % 2 == 0}
+22.	1.	
