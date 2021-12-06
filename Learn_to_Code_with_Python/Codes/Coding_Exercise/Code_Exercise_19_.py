@@ -12,8 +12,7 @@ Created on Mon Nov 29 23:25:14 2021
 		smallest_number([4, 5, 4])     => 4
 		smallest_number([-3, -2, -1])  => -3
 	2.	Define a concatenate function that accepts a list of strings. 
-		The function should return a concatenated string which consists of all list elements whose 
-		length is greater than 2 characters.
+		The function should return a concatenated string which consists of all list elements whose length is greater than 2 characters.
 		EXAMPLES
 		--------
 		concatenate(["abc", "def", "ghi"])      => "abcdefghi"

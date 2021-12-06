@@ -3,7 +3,7 @@
 Created on Tue Nov 23 17:14:04 2021
 @author: ramesh.kp
 
-4.	1.	Define a string_adder function that accepts two strings (a and b) as arguments.
+4.	1.	Define a string_adder function that accepts two strings (a and b) as arguments. 
 		It should return a concatenated version of the arguments with a space in between.
 		If the user does not pass in arguments, both arguments should default to an empty string.
 		EXAMPLES
@@ -13,7 +13,8 @@ Created on Tue Nov 23 17:14:04 2021
 		string_adder()                      => " "
 		string_adder("Tiger")               => "Tiger "
 	2.	Define a multiplier function that accepts three integers as arguments.
-		Return the product of the arguments. The product is the total when values are multiplied together.
+		Return the product of the arguments. 
+		The product is the total when values are multiplied together.
 		If the user does not provide any arguments, all three parameters should have default arguments of 1.
 		EXAMPLES
 		--------

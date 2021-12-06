@@ -12,8 +12,8 @@ Created on Tue Nov 30 11:57:06 2021
 	c.	Given the camping_trip_supplies list below, overwrite "Socks" with "Food".
 		--------
 		camping_trip_supplies = ["Socks", "Flashlight", "Tent", "Blanket"]
-	d.	Given the tech_companies list below, overwrite the Microsoft, Blueberry, and IBM strings 
-		with the strings “Facebook” and “Apple”. Use list slicing syntax.
+	d.	Given the tech_companies list below, overwrite the Microsoft, Blueberry, and IBM strings with the strings “Facebook” and “Apple”. 
+		Use list slicing syntax.
 		--------
 		tech_companies = ["Google", "Microsoft", "Blackberry", "IBM", "Yahoo"]
 """

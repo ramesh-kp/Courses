@@ -3,7 +3,8 @@
 Created on Wed Dec  1 17:38:09 2021
 @author: ramesh.kp
 
-31.	1.	Declare a greater_sum function that accepts two lists of numbers. It should return the list with the greatest sum.
+31.	1.	Declare a greater_sum function that accepts two lists of numbers. 
+		It should return the list with the greatest sum.
 		You can assume the lists will always have different sums.
 		EXAMPLES
 		--------

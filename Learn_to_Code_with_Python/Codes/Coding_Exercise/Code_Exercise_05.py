@@ -10,8 +10,7 @@ Created on Wed Nov 24 21:39:58 2021
 		long_word("Python")         => False
 		long_word("magnificent")    => True
 	2.	Define a first_longer_than_second function that accepts two string arguments. 
-		The function should return a True if the first string is longer than the second and False otherwise 
-        (including if they are equal in length).
+		The function should return a True if the first string is longer than the second and False otherwise (including if they are equal in length).
 		EXAMPLES
 		--------
 		first_longer_than_second("Python", "Ruby")     => True

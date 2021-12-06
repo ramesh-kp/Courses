@@ -4,8 +4,7 @@ Created on Thu Nov 25 14:11:19 2021
 @author: ramesh.kp
 
 17.	1.	Declare a nested_extraction function that accepts a list of lists and an index position.
-		The function should use the index as the basis of finding both the nested list 
-		and the element from that list with the given index position.
+		The function should use the index as the basis of finding both the nested list and the element from that list with the given index position.
 		You can assume the number of lists will always be equal to the number of elements within each of them.
 		EXAMPLES
 		--------

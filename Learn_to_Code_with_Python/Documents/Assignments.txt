@@ -531,4 +531,97 @@
 		numbers = [3, 6, 7, 12, 15]
 		##############################
 		{ number: number ** 3 for number in numbers if number % 2 == 0}
-22.	1.	
+22.	1.	What is a set?
+		##############################
+		A set is a mutable, unordered data structure for storing non-duplicate values.
+	2.	What is the syntax to create a set?
+		##############################
+		{ }
+	3.	What is the difference between the remove and discard methods on a set?
+		##############################
+		If the argument does not exist in the set, the discard method will not raise an error. 
+		The remove method will raise a KeyError exception.
+	4.	What is the alternate symbol for the intersection method?
+		##############################
+		&
+	5.	What is the alternate symbol for the difference method?
+		##############################
+		-
+	6.	What is the difference between the difference and symmetric_difference methods?
+		##############################
+		The difference method returns the elements that are found in one set but not the other. 
+		The symmetric_difference method returns the elements that are found in either set but not both.
+	7.	What is the difference between the union and intersection methods?
+		##############################
+		The intersection method returns a set of only the elements that are found in both sets. 
+		The union method returns a set that combines all elements across both sets.
+	8.	What is the alternate symbol for the symmetric_difference method?
+		##############################
+		^
+	9.	What is the alternate symbol for the union method?
+		##############################
+		|
+	10.	What does a frozenset offer that a regular set doesn’t?
+		##############################
+		A frozenset is immutable. Values cannot be added or removed after the set is initially created.
+23.	1.	In my_program.py, create a typo with the calculator module name after the ​import​ statement 
+		(for example, “kalculator”). What exception is raised?
+		##############################
+		An ​ImportError​ exception will be thrown. Python is not able to find the module being imported in the current 
+		directory.
+	2.	Can a module have an attribute with the same name as the module? Try declaring a variable called ​calculator​ in ​
+		calculator.py​. Is ​calculator.calculator​ valid to use in ​main.py​?
+		##############################
+		Yes, it’s completely valid!
+	3.	Try using the ​import​ statement with the complete filename including the ​.py​ extension (calculator.py). 
+		What error is raised?
+		##############################
+		A ​ModuleNotFoundError​ exception. The text reads “No module named 'calculator.py'; 'calculator' is not a package”.
+	4.	What is returned if you pass the imported ​calculator​ module into the ​type​ function?
+		##############################
+		<class 'module'>
+	5.	What is returned when you pass the imported ​math​ module into the ​dir​ function? Paste the output here.
+		##############################
+		The dir function return a list of all the names contained inside a namespace. The extra dunder strings are 
+		built-in names predefined by Python. The output for the math module is
+		dir(math)
+		['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 
+		'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 
+		'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 
+		'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 
+		'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+	6.	What is returned if you pass the imported ​calculator​ module into the ​dir​ function? Paste the output here.
+		##############################
+		dir(calculator)
+		['PI', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 
+		'add', 'area', 'creator', 'subtract']
+24.	1.	What is the difference between a script and a module?
+		##############################
+		A script refers to a Python file that is executed directly. 
+		A module is a Python file that is imported by another file (such as a script).
+	2.	What is the Python standard library?
+		##############################
+		The Python standard library is a collection of ~250 modules that help improve developer productivity. 
+		These modules are designed for various use cases like mathematics, statistics, randomness, text pattern matching, 
+		audio analysis, URL requests, system access and more.
+	3.	What does the __name__ variable represent and what it is commonly used for?
+		##############################
+		The __name__ variable is an internal name stored on every module. The script file being executed will have its 
+		__name__ variable set to the string “__main__”. This can be used to confirm a file is the script file and take 
+		certain actions if this is the case.
+	4.	What keyword is used to assign as alias to an import? Provide an example.
+		##############################
+		The as keyword is used to assign an alias.
+		import pandas as pd
+	5.	How is the "from module import x" syntax different from the regular import syntax?
+		##############################
+		The from module import x syntax imports specific attributes from another module into the namespace of the current 
+		module. The import x syntax maintains a separation of namespaces. The imported module’s attributes must be explicitly 
+		referenced and prefixed with the name of the import module (i.e. x.attribute)
+	6.	Why might it be a bad idea to use "from module import *" syntax?
+		##############################
+		It might be unclear which module an attribute is coming from. In addition, multiple modules may have attributes 
+		with the same name. Without a namespace encapsulating each name, there may be name collisions.
+25.	1.	
+
+

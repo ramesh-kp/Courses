@@ -5,7 +5,7 @@ Created on Wed Dec  1 17:15:19 2021
 
 30.	1.	Declare a right_words function that accepts a list of words and a number.
 		Return a new list with the words that have a length equal to the number.
-		Do NOT use list comprehension.
+		Do not use list comprehension.
 		EXAMPLES
 		--------
 		right_words(['cat', 'dog', 'bean', 'ace', 'heart'], 3)     => ['cat', 'dog', 'ace']

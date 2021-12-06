@@ -5,8 +5,11 @@ Created on Tue Nov 30 09:40:55 2021
 
 13.	Define a function called "factorial" that accepts a single number as input. 
 	A factorial represents the product of all numbers up to, and including, that number. 
-	For example, 5 factorial is 5 * 4 * 3 * 2 * 1 = 120. Return the factorial calculation from your function. 
-	You should NOT use any kind of loops. Instead, utilize recursion. Your function MUST call itself.
+	For example, 5 factorial is 5 * 4 * 3 * 2 * 1 = 120. 
+	Return the factorial calculation from your function. 
+	You should NOT use any kind of loops. 
+	Instead, utilize recursion. 
+	Your function MUST call itself.
 	EXAMPLES
 	--------
 	factorial(1) => 1

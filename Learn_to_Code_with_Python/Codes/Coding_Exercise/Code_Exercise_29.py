@@ -19,8 +19,7 @@ Created on Tue Nov 30 17:54:37 2021
 			elements = ["Hydrogen", "Helium", "Lithium", "Boron", "Carbon"]
 			# lengths = []
 	2.	Declare a destroy_elements function that accepts two lists.
-		It should return a list of all elements from the first list that are NOT contained in 
-		the second list.
+		It should return a list of all elements from the first list that are NOT contained in the second list.
 		Use list comprehension in your solution.
 		EXAMPLES
 		--------
