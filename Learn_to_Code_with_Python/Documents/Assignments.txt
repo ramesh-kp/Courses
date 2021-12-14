@@ -622,6 +622,25 @@
 		##############################
 		It might be unclear which module an attribute is coming from. In addition, multiple modules may have attributes 
 		with the same name. Without a namespace encapsulating each name, there may be name collisions.
-25.	1.	
+25.	1.	Why is it recommended to use the with context when reading or writing to a file?
+		##############################
+		It ensures that Python performs clean-up processes when handling the file. Otherwise, it is possible for the 
+		program to run into an error midway through execution, not close the file, and end up with corrupted content.
+	2.	What does the second argument to the open function represent? What are the available options?
+		##############################
+		It represents the processing mode or the action that we intend to take with the file. 
+		The options are r for “read” (the default), w for “write”, and a for append.
+	3.	What’s the difference between the "w" and "a" arguments for the open function's processing mode?
+		##############################
+		They alter how text will be written to the file. 
+		With w, the contents of the file will be replaced. 
+		With a (append), the new content will be added to the end of the existing content.
+	4.	What will Python do when given a "w" mode and a write method command with a file that does not exist?
+		##############################
+		It will automatically create the file.
+	5.	What type of exception is raised if Python is unable to find the requested file?
+		##############################
+		FileNotFound
+26.	
 
 
