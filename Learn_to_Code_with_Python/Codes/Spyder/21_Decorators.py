@@ -4,6 +4,8 @@ Created on Fri Dec 10 13:57:44 2021
 @author: ramesh.kp
 """
 
+import functools
+
 print()
 print("#" * 30)
 def one():
@@ -68,6 +70,7 @@ def calculator(operation):
 print(calculator("add")(10, 4))
 print(calculator("subtract")(7, 7))
 print(calculator("multiply")(10, 7))
+print("#" * 30)
 
 def square(num):
     return num ** 2
@@ -79,6 +82,161 @@ def times10(num):
 operations = [square, cube, times10]
 for func in operations:
     print(func(5))
+print("#" * 30)
 
+# Global and Local Variables
+age = 28
+TAX_RATE = 0.08
+
+def fancy_func():
+    age = 100
+    print(age)
+
+def calculate_tax(price):
+    return round(price * TAX_RATE, 2)
+
+def calculate_tip(price):
+    return round(price * (TAX_RATE * 3), 2)
+
+fancy_func()
+print(age)
+print(calculate_tax(10))
+print(calculate_tip(10))
+print("#" * 30)
+
+# LEGB Rules - Local / Enclosing Functions / Global / Built in
+def outer():
+    # Enclosing Funciton Scope
+    # x = 10
+    def inner():
+        # Local Scope
+        # x = 5
+        return len
+    return inner()
+
+print(outer()("Ramesh K P"))
+print("#" * 30)
+
+# Closures
+def outer():
+    candy = "Snickers"
+    def inner():
+        return candy
+    return inner()
+
+the_func = outer()
+print(the_func)
+print("#" * 30)
+
+# Global Keyword
+x = 10
+def change_stuff():
+    global x
+    x = 15
+    
+print(x)
+change_stuff()
+print(x)
+print("#" * 30)
+
+# The Nonlocal Keyword
+def outer():
+    bubble_tea_flavor = "Black"
+    def inner():
+        nonlocal bubble_tea_flavor
+        bubble_tea_flavor = "Taro"
+    inner()
+    return bubble_tea_flavor
+
+print(outer())
+print("#" * 30)
+
+# Decorators
+# def be_nice(fn):
+#     def inner():
+#         print("Nice to meet you! I'm honored to execute your function for you!")
+#         fn()
+#         print("It was my pleasure executing your function! Have a nice day!")
+#     return inner
+
+# def complex_bussiness_logic():
+#     print("Something Complex!")
+    
+# result = be_nice(complex_bussiness_logic)
+# print(result())
+# print("-" * 30)
+# be_nice(complex_bussiness_logic)()
+# print("-" * 30)
+
+def be_nice(fn):
+    def inner():
+        print("Nice to meet you! I'm honored to execute your function for you!")
+        fn()
+        print("It was my pleasure executing your function! Have a nice day!")
+    return inner
+
+@be_nice
+def complex_bussiness_logic():
+    print("Something Complex!")
+
+@be_nice
+def another_fancy_function():
+    print("Goo goo gaga")
+
+complex_bussiness_logic()
+print("-" * 30)
+another_fancy_function()
+print("#" * 30)
+
+def be_nice(fn):
+    def inner(*first, **second):
+        print("-" * 30)
+        print(first)
+        print(second)
+        print("-" * 30)
+        print("Nice to meet you! I'm honored to execute your function for you!")
+        fn(*first, **second)
+        print("It was my pleasure executing your function! Have a nice day!")
+    return inner
+        
+@be_nice
+def complex_bussiness_logic(stakeholder, position):
+    print(f"Something Complex for {position} {stakeholder}")
+    
+complex_bussiness_logic("Ramesh K P", "Embedded Engineer")
+complex_bussiness_logic(stakeholder = "Ramesh K P", position = "Embedded Engineer")
+complex_bussiness_logic("Ramesh K P", position = "Embedded Engineer")
+print("#" * 30)
+
+def be_nice(fn):
+    def inner(*first, **second):
+        print("Nice to meet you! I'm honored to execute your function for you!")
+        result = fn(*first, **second)
+        print(result)
+        print("It was my pleasure executing your function! Have a nice day!")
+    return inner
+        
+@be_nice
+def complex_bussiness_logic(a, b):
+    return a + b
+
+complex_bussiness_logic(5, 3)
+print("#" * 30)
+
+def be_nice(fn):
+    @functools.wraps(fn)
+    def inner(*first, **second):
+        print("Nice to meet you! I'm honored to execute your function for you!")
+        result = fn(*first, **second)
+        print(result)
+        print("It was my pleasure executing your function! Have a nice day!")
+    return inner
+        
+@be_nice
+def complex_bussiness_logic(a, b):
+    "Adds two numbers together"
+    return a + b
+
+help(complex_bussiness_logic)
 print("#" * 30)
 print()
