@@ -641,6 +641,223 @@
 	5.	What type of exception is raised if Python is unable to find the requested file?
 		##############################
 		FileNotFound
-26.	
+26.	1.	What is a higher order function?
+		##############################
+		A higher order function is one that either accepts a function as an argument or returns a function as a return value.
+	2.	What is wrong with the code below? My calculate invocation is not printing out 50.
+		def multiply(a, b):
+			return a * b
+		def divide(a, b):
+			return a / b
+		def calculate(func, a, b):
+			func(a, b)
+		print(calculate(multiply, 10, 5))
+		##############################
+		The return value of the invocation of func is not being returned out of the calculate function. 
+		Thus, calculate is returning None instead of 50, the proper product of 10 and 5.
+	3.	What is the difference between a local variable and a global variable?
+		##############################
+		A local variable is one confined to a scope that is smaller than the file (i.e. the module). 
+		An example is a variable declared in the body of a function; it is limited to the function’s scope.
+		A global variable is one confined to the file’s scope. 
+		A global variable can be used from anywhere in the file, such as in a function.
+	4.	What does the acronym LEGB stand for?
+		##############################
+		Local, Enclosed, Global, Built-in. 
+		It is the order in which Python will search namespaces / scopes to find the name that is being requested.
+	5.	What is a closure?
+		##############################
+		A closure describes a programming pattern where a scope retains access to an enclosing scope’s name or data. 
+		That data will persist even if the external scope has finished executing; 
+		an example is a nested function that is returned from another that holds access to a variable value.
+	6.	Why will the following code raise a NameError?
+		def a():
+			def b():
+				def c():
+					return val
+				return c()
+			return b()
+		print(a())
+		val = "Hello"
+		##############################
+		While there is a global val variable, it is not declared when a is invoked. 
+		Python searches in the local c function, then in all the enclosing functions, then in the global scope, 
+		then the built-ins and does not the find the val name.
+27.	1.	What Python keyword can you use in front of a variable inside a function to make it reference a variable 
+		of the same name defined in the module?
+		##############################
+		global
+	2.	What is a decorator?
+		##############################
+		A decorator is a higher-order function that both accepts a function as an input and returns another function 
+		as an output. 
+		It performs some additional operations around the execution of the original function.
+	3.	Why should you define *args and / or **kwargs to a function that will wrap another?
+		##############################
+		It ensures that arguments are properly passed to the decorated function. 
+		*args and **kwargs must be 
+		(1) defined as parameters in the wrapper function and 
+		(2) unpacked to serve as positional and keyword arguments to the invoked function passed in as an argument.
+	4.	I expect to get “PYTHON” printed out when I invoke concatenate below but am getting None. 
+		What is the mistake in my code and how can I fix it?
+		import functools
+		def uppercase(fn):
+			@functools.wraps(fn)
+			def wrapper(*args, **kwargs):
+				fn(*args, **kwargs).upper()
+				return wrapper
+			@uppercase
+			def concatenate(a, b):
+				"""Combines two strings together"""
+				return a + b
+		print(concatenate("pyt", "hon"))
+		##############################
+		The concatenate function (represented by fn) is being invoked and its return value is being uppercased. 
+		However, that result is not being returned by the wrapper function that the uppercase decorator returns. 
+		We can solve this problem with a return keyword.
+		return fn(*args, **kwargs).upper()
+	5.	Let’s say I've defined a time_it decorator. 
+		It will start a timer, then execute a function, then print out how long it took to run that function.
+		I also have a complex_operation function defined below. 
+		Provide both syntactical options to decorate complex_operation with time_it and invoke it.
+		def complex_operation():
+			for i in range(100000):
+				print(i)
+		##############################
+		OPTION 1:
+		@time_it
+		def complex_operation():
+			for i in range(1000):
+				print(i)
+		complex_operation()
+		OPTION 2:
+		timed_complexity = time_it(complex_operation)
+		timed_complexity()
+28.	1.	What is the difference between a class and an object?
+		##############################
+		The class is a blueprint or template for making objects. 
+		An object is an instance of a class.
+	2.	Pick an object, either physical or metaphysical. 
+		Define a basic class definition for it below.
+		##############################
+		class Pencil():
+			def __init__(self, color = "yellow", eraser = True):
+				self.color = color
+		self.eraser = eraser
+	3.	What is the purpose of the __init__ method?
+		##############################
+		The __init__ method automatically runs when an object is instantiated from the class. 
+		It is used to configure the object’s initial state, such as the values for its attributes.
+	4.	Why is it not recommended to set attributes on individual object instances?
+		##############################
+		To avoid errors in your program, it’s a good idea to ensure consistency across objects made from the same class. 
+		The objects don’t necessarily need to have the same state but they should have the same attributes and methods. 
+		Imagine invoking a method like append on a list without being certain if it exists!
+	5.	What does the self keyword refer to in the __init__ method?
+		##############################
+		self refers to the object being instantiated from the class.
+29.	1.	What is a property?
+		##############################
+		A property has the appearance of an attribute on an object. 
+		However, behind the scenes, it invokes an instance method (called a reader) whenever it is accessed 
+		and also invokes an instance method (called a writer) whenever a new value is assigned to it.
+	2.	What is a class method? How do you designate a method as a class method?
+		##############################
+		It is a method that is invoked directly on the class rather than an instance of it. 
+		The @classmethod decorator placed above a method in a class body designates it as a class method.
+	3.	What is a static method? How do you designate a method as a static method?
+		##############################
+		It is a helper method that is defined inside a class body but accepts neither the instance nor the class an argument. 
+		The @staticmethod decorator is placed above a method in the class body to designate it as a class method.
+	4.	What do the three arguments to the getattr function represent?
+		##############################
+		The object, the attribute whose value should be extracted, and a default fallback value to return 
+		if the attribute does not exist.
+	5.	When should you use a class attribute?
+		##############################
+		A class attribute can be used whenever there is a piece of data that does not need to be copied among all objects. 
+		An example is a constant value that will not be changed or mutated.
+30.	1.	What is a magic method and what is its purpose?
+		##############################
+		Python includes several magic methods, also called special methods, that you can define in your classes. 
+		These methods begin and end with double underscores (__) and developers like to call them dunder methods. 
+		A magic method is called implicitly by Python behind the scenes. 
+		They can be used to make our custom objects play friendly with existing Python functionalities 
+		like iteration, indexing, length, truthiness and more.
+	2.	What is a docstring?
+		##############################
+		A docstring is a string placed at the top of a module, function, class or method that serves as its documentation. 
+		Documentation for any object can accessed by passing it to the help function. 
+		The Python library ecosystem also includes tools to parse docstrings into professional documentation 
+		(such as HTML pages).
+	3.	What does the __getitem__ magic method establish?
+		##############################
+		The __getitem__ magic method establishes how an object will respond when it is indexed with square brackets. 
+		Different objects in Python — for example, lists and dictionaries — respond differently; 
+		now, our custom objects can do the same. 
+		It also implicitly establshes a protocol for iterating over your object.
+	4.	If a class defines neither a __bool__ nor a __len__ magic method, will the object be considered truthy or falsy? 
+		Provide some code to prove your case.
+		##############################
+		If neither of the methods are defined, the object will be considered truthy.
+		class Test():
+			pass
+		t = Test()
+		if t:
+			print("hello")
+	5.	What module is namedtuple found in?
+		##############################
+		collections
+31.	1.	What is a subclass?
+		##############################
+		A subclass is a class that inherits attributes and methods from another class.
+		The class being inherited from is called the parent class or superclass.
+	2.	What is method overriding?
+		##############################
+		Method overriding is defining a method on a subclass with the same name as a method in the superclass it inherits from. 
+		The method overrides the original implementation; 
+		this means the subclass version will be invoked instead of the superclass version.
+	3.	How can you invoke a method defined in a superclass from a subclass?
+		##############################
+		Use super() to get access to the superclass, then invoke the method with dot syntax. 
+		For example, super().__init__() can be used to invoke the initialization method in the superclass.
+	4.	What kind of search algorithm does Python use when a class inherits from multiple superclasses?
+		##############################
+		Depth first
+	5.	Give a quick summary (2-3 sentences) of the diamond inheritance problem.
+		##############################
+		The diamond inheritance problem occurs when the same superclass is referenced multiple times in the inheritance 
+		hierarchy of a class. 
+		This happens when a class inherits from two classes that both inherit from the same class. 
+		In these scenarios, Python will remove the first occurrence of all duplicate superclasses from the search.
+	6.	What is composition?
+		##############################
+		Composition is a design pattern where an object stores another object as an attribute. 
+		That way, a specific responsibility can be delegated to a separate object. 
+		Many developers argue this leads to more stable architecture than using inheritance.
+32.	1.	What is a traceback?
+		##############################
+		A traceback is a report or summary or analysis of the exception that was raised. 
+		It includes the file name, the line number, the type of error, and more.
+	2.	What class should your custom errors inherit from?
+		##############################
+		Exception
+	3.	What is the difference between an else block and a finally block?
+		##############################
+		The else block will execute only if the try block executes without error. 
+		The finally block executes will always execute, irrespective of whether an exception was raised in the try block.
+	4.	Why is it better to catch a specific exception than to catch any exception?
+		##############################
+		It’s a broad approach that may miss critical errors. 
+		Listing a specific exception forces the developer to identify the specific way an operation could go wrong. 
+		An alternate error may require a different pathway of execution; a catch-all exception may miss it.
+	5.	What keyword is used to trigger a specific exception?
+		##############################
+		raise
+33.	1.	
 
 
+
+
+
+##############################
