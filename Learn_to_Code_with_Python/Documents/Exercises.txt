@@ -917,5 +917,8 @@ Coding Exercise:
 	This will mutate the list, randomizing the order of its elements.
 	Use list comprehension to invoke the "use" method on all three objects in "dental_health_kit".
 	Assign the resulting list of strings to an "actions" variable.
-62.	EXAMPLES
+62.	
+
+
+	EXAMPLES
 	--------

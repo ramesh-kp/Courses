@@ -24,5 +24,17 @@ https://www.udemy.com/
 user: learn@naicoits.com
 pwd: L#arn@Naico
 
+Doing
+------
+Learn to Code with Python - 58
+Python for Beginners: Introduction to Python - 16.5
+Master Microcontroller and Embedded Driver Development(MCU1) - 28.5
+
+Completed
+---------
 
 
+To Buy
+------
+1.	Master C/Embedded C for embedded system learn-in-depth .com
+	https://www.udemy.com/course/master-cembedded-c-for-embedded-system-learn-in-depth-com/
