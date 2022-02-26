@@ -27,14 +27,28 @@ pwd: L#arn@Naico
 Doing
 ------
 Learn to Code with Python - 58
-Python for Beginners: Introduction to Python - 16.5
-Master Microcontroller and Embedded Driver Development(MCU1) - 28.5
-
-Completed
----------
-
 
 To Buy
 ------
 1.	Master C/Embedded C for embedded system learn-in-depth .com
 	https://www.udemy.com/course/master-cembedded-c-for-embedded-system-learn-in-depth-com/
+
+Downloaded
+----------
+1.	Basics of Scrum, Agile and Project Delivery
+2.	Electronics engineering An introduction
+3.	Email Writing- How to Write Effective Emails
+4.	Get ahead Introduction to Workplace Etiquette
+5.	Learn_to_Code_with_Python
+6.	Management Essential Skills for First Time Managers
+7.	MASTER Git, Github and Github Actions for DevOps CICD- 2022
+8.	Mastering your own communication The fundamentals
+9.	Python for BeginnersIntroduction to Python
+10.	Python,Flask Framework And Django Course For Beginners
+11.	SDLC modelsbasics for beginners
+12.	Steli's Essential Guide to Negotiation Hacks
+13.	The 4 Hour Work Life Improve Health, Sleep & Productivity!
+14.	The Complete Electronics Course 2022 Analog Hardware Design
+15
+
+
